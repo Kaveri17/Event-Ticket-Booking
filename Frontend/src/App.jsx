@@ -1,12 +1,16 @@
+import MyRoutes from "./MyRoutes"
 
 
 function App() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold underline bg-slate-600">
+      {/* <h1 className="text-3xl font-bold underline bg-slate-600">
       Hello world from AKA EVENT TICKET BOOKING SYSTEM
-    </h1>
+    </h1> */}
+    <MyRoutes/>
+
+
     </>
   )
 }
