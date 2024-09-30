@@ -41,3 +41,13 @@ opacity: 70%;
     
   }
  
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family:"Fira Sans Condensed", sans-serif ;
+}
+
+.heading{
+    font-family: "Spicy Rice", serif;
+}
