@@ -7,7 +7,7 @@ import { IoLocation } from 'react-icons/io5';
 const Register = () => {
   return (
 <>
-<div className=' pt-8'>
+<div className=''>
       <div className='ram w-full h-screen ' >
 
         <div className='py-20'>
