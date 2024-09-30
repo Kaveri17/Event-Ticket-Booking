@@ -11,20 +11,24 @@ import Gallery from "./Pages/Gallery"
 
 const MyRoutes = () => {
   return (
-   <>
-   <BrowserRouter>
-   <Routes>
-   <Route path="/" element={<Layout />}>
-    <Route index element= {<Home/>}/>
-    <Route path='/about' element={<About/>}/>
-    <Route path='/test' element={<Test/>}/>
-    <Route path='/register' element={<Register/>}/>
-    <Route path="/gallery" element={<Gallery/>} />
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/test' element={<Test />} />
+            <Route path='/register' element={<Register />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password" element={<ResetPassword />} />
 
-</Route>
-   </Routes>
-   </BrowserRouter>
-   </>
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
