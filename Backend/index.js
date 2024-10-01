@@ -10,7 +10,9 @@ import cors from 'cors'
 dotenv.config()
 
 const app =express()
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 5000
+
+
 
 //middleware that allows us to parse incoming request :re.body  
 app.use(express.json()) 
