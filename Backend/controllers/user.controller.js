@@ -132,7 +132,8 @@ export const login = async (req, res) => {
         .status(400)
         .json({ success: false, message: "Invalid password" });
     }
-    generateTokenAndSetCookie(res, user._id);
+    generateTokenAndSetCookie(res,user._id);
+    console.log()
     user.lastLogin = new Date();
     await user.save();
     res.status(200).json({
