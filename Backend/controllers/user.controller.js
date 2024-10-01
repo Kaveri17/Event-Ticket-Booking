@@ -9,10 +9,10 @@ import { sendPasswordResetEmail, sendResetSuccessEmail, sendVerificationEmail, s
 import { fail } from "assert"
 
 export const signup = async (req,res) =>{
-    const {email,password,username,firstname,lastname,phone,role} = req.body
+    const {email,password,username,firstname,lastname,phone,role,address} = req.body
 
     try {
-        if(!email || !password || !username|| !firstname|| !lastname||!phone|| !role){
+        if(!email || !password || !username|| !firstname|| !lastname||!phone|| !role || !address){
             throw new Error("All the fields are required")
         } 
         const userAlreadyExists = await  User.findOne({email})
@@ -122,7 +122,7 @@ export const logout = async (req,res) =>{
 }
 
 export const forgotPassword = async(req,res) =>{
-    const {email} = req.body.email
+    const {email} = req.body
     try {
         const user = await User.findOne({email})
         if(!user){

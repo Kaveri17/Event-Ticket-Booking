@@ -1,15 +1,37 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { forgotPassword } from '../api/Userapp';
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');       
+  const [error, setError] = useState('');        
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
- 
-    console.log('Email:', email);
-    setMessage('If the account exists, a password reset link will be sent');
+    try{
+      await forgotPassword({email})
+      .then(data => {
+        if(data.error){
+          setError(data.error)
+          setSuccess(false)
+        }
+        else{
+          setSuccess(true)
+          setError('')
+        
+        }
+      })
+    }catch (error) {
+      console.log(error);
+      setError(error.message); 
+    }
   };
+  const showError = () => {
+    if (error) {
+      return <div className='text-red-600 text-xl font-bold text-center'>{error}</div>;
+    }
+  };
+
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -28,6 +50,7 @@ const ForgotPassword = () => {
               required
             />
           </div>
+          {showError()}
           <button
             type="submit"
             className="w-full bg-orange-500 text-white py-2 rounded-lg transition duration-200 hover:bg-orange-600"
@@ -35,11 +58,11 @@ const ForgotPassword = () => {
         Reset password
           </button>
         </form>
-        {message && (
+        {/* {message && (
           <div className="mt-4 text-center text-gray-600">
             {message}
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );

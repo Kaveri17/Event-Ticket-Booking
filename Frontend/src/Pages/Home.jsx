@@ -1,5 +1,3 @@
-
-
 import React from 'react'
 
 import Slider from "react-slick";
@@ -161,12 +159,12 @@ const Home = () => {
 
 
   <div className='items-center flex text-xl text-neutral-500 space-x-2'>
-    <i class="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
+    <i className="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
   </div>
 
 
   <div className='items-center flex text-lg text-neutral-500 space-x-2 pt-3'>
-    <i class="fa-solid fa-location-dot "></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
+    <i className="fa-solid fa-location-dot "></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
 
   </div>
 
@@ -192,12 +190,12 @@ const Home = () => {
 
 
   <div className='items-center flex text-lg text-neutral-500 space-x-2'>
-    <i class="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> October 30, 2024, 9:00am</span>
+    <i className="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> October 30, 2024, 9:00am</span>
   </div>
 
 
   <div className='items-center flex text-xl text-neutral-500 space-x-2 pt-3'>
-    <i class="fa-solid fa-location-dot "></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Nachghar, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Jamal </span>
+    <i className="fa-solid fa-location-dot "></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Nachghar, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Jamal </span>
 
   </div>
 
@@ -223,12 +221,12 @@ const Home = () => {
 
 
   <div className='items-center flex text-xl text-neutral-500 space-x-2'>
-    <i class="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> December 30, 2024, 9:00am</span>
+    <i className="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> December 30, 2024, 9:00am</span>
   </div>
 
 
   <div className='items-center flex text-lg text-neutral-500 space-x-2 pt-3'>
-    <i class="fa-solid fa-location-dot "></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Dasharath Rangasala, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'>Tripureshwar </span>
+    <i className="fa-solid fa-location-dot "></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Dasharath Rangasala, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'>Tripureshwar </span>
 
   </div>
 
@@ -256,12 +254,12 @@ const Home = () => {
 
 
               <div className='items-center flex text-xl text-neutral-500'>
-                <i class="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
+                <i className="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
               </div>
 
 
               <div className='items-center flex text-xl text-neutral-500'>
-                <i class="fa-solid fa-location-dot pr-2"></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
+                <i className="fa-solid fa-location-dot pr-2"></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
 
               </div>
 
@@ -286,12 +284,12 @@ const Home = () => {
 
 
               <div className='items-center flex text-xl text-neutral-500'>
-                <i class="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
+                <i className="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
               </div>
 
 
               <div className='items-center flex text-xl text-neutral-500'>
-                <i class="fa-solid fa-location-dot pr-2"></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
+                <i className="fa-solid fa-location-dot pr-2"></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
 
               </div>
 
@@ -317,12 +315,12 @@ const Home = () => {
 
 
               <div className='items-center flex text-xl text-neutral-500'>
-                <i class="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
+                <i className="fa-solid fa-clock pr-2"></i>  <span className=' text-neutral-500'> September 30, 2024, 9:00am</span>
               </div>
 
 
               <div className='items-center flex text-xl text-neutral-500'>
-                <i class="fa-solid fa-location-dot pr-2"></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
+                <i className="fa-solid fa-location-dot pr-2"></i> <span className=' hover:text-red-400 cursor-pointer text-neutral-500 ' >Hotel Ambassador, </span><span className=' hover:text-red-400 cursor-pointer text-neutral-500'> Lazimpat </span>
 
               </div>
 
