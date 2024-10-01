@@ -83,7 +83,7 @@ const Register = () => {
       {/* form of registeration */}
 
       <div className="min-h-screen flex flex-col items-center justify-center">
-        <div className="w-full max-w-lg bg-cyan-100 shadow-sm px-6 my-4 ">
+        <div className="w-full max-w-lg bg-gray-100 shadow-sm px-6 my-4 ">
           <h1 className="text-3xl font-bold pb-2 pt-3">Register User</h1>
           <div className="border-t-2 w-16 pb-6 border-red-500"></div>
 
@@ -229,7 +229,7 @@ const Register = () => {
             {/* Submit Button */}
             <button
               type="submit"
-              className="bg-blue-500 text-white w-full py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+              className="bg-orange-500 text-white w-full py-2 rounded-lg transition duration-300"
             >
               Register
             </button>

@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { login } from '../api/Userapp';
-import {  useNavigate } from 'react-router-dom';
-
-=======
 import { useState } from "react";
 import { login } from "../api/Userapp";
 import { useNavigate } from "react-router-dom";
->>>>>>> origin
 
 const Login = () => {
   const [email, setEmail] = useState("");

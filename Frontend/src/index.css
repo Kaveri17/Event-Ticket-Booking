@@ -70,3 +70,11 @@
     z-index: 1; 
 }
 
+/* gallery */
+
+.gall {
+    background-image: url('gall.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 37vh;
+}
