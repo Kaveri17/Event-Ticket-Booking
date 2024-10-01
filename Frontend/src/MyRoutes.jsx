@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Test from "./Pages/Test"
-import Home from './pages/Home'
+import Home from './Pages/Home'
 import About from './pages/About'
 import Register from './Pages/Register'
 import Layout from "./layout/Layout"
@@ -27,7 +27,7 @@ const MyRoutes = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/login" element={<Login />} />
             <Route path="/forgot-password" element={<ForgotPassword />} />
-            <Route path="/reset-password" element={<ResetPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
 
           </Route>
         </Routes>

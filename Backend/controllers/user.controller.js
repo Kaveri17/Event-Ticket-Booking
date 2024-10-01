@@ -9,10 +9,10 @@ import { sendPasswordResetEmail, sendResetSuccessEmail, sendVerificationEmail, s
 import { fail } from "assert"
 
 export const signup = async (req,res) =>{
-    const {email,password,name} = req.body
+    const {email,password,username,firstname,lastname,phone,role} = req.body
 
     try {
-        if(!email || !password || !name){
+        if(!email || !password || !username|| !firstname|| !lastname||!phone|| !role){
             throw new Error("All the fields are required")
         } 
         const userAlreadyExists = await  User.findOne({email})
@@ -27,9 +27,13 @@ export const signup = async (req,res) =>{
         const user = new User({
             email,
             password: hashedPassword,
-            name,
+            username,
+            firstname,
+            lastname,
+            phone,
             verificationToken,
-            verificationTokenExpiresAt: Date.now() + 24* 60 * 60 * 1000 // 24 hours
+            verificationTokenExpiresAt: Date.now() + 24* 60 * 60 * 1000, // 24 hours
+            role
         })
         await user.save(); // saved in database
 

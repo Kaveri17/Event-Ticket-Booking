@@ -47,3 +47,22 @@ export const login = (user) => {
 //         return false
 //     }
 // }
+
+
+
+//Forget password
+export const forgotPassword = (email) => {
+  
+    return fetch(`${API}/user/forgot-password`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(email ),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.log(error));
+  };
+
+
+

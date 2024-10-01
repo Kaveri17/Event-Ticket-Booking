@@ -1,14 +1,27 @@
 import React, { useState } from 'react';
+import { forgotPassword } from '../api/Userapp';
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');       
+  const [error, setError] = useState('');        
+  const [success, setSuccess] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit =  (e) => {
     e.preventDefault();
+     forgotPassword({email})
+    .then(data => {
+      if(data.error){
+        setError(data.error)
+        setSuccess(false)
+      }
+      else{
+        setSuccess(true)
+        setError('')
+      
+      }
+    })
  
     console.log('Email:', email);
-    setMessage('If the account exists, a password reset link will be sent');
   };
 
   return (
@@ -35,11 +48,11 @@ const ForgotPassword = () => {
         Reset password
           </button>
         </form>
-        {message && (
+        {/* {message && (
           <div className="mt-4 text-center text-gray-600">
             {message}
           </div>
-        )}
+        )} */}
       </div>
     </div>
   );
