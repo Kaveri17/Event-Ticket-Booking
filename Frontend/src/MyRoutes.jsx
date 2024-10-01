@@ -6,31 +6,36 @@ import Contact from './components/Contact';
 import Login from './components/Login';
 import ForgotPassword from './components/ForgotPassword';
 import ResetPassword from './components/ResetPassword';
-import Test from "./Pages/Test"
-import Home from './pages/Home'
-import About from './pages/About'
-import Register from './Pages/Register'
+import Gallery from './Pages/Gallery';
+import Register from './Pages/Register';
+import About from './pages/About';
+import Home from './Pages/Home';
+import Layout from './layout/Layout';
+// import Test from "./Pages/Test"
+// import Home from './Pages/Home'
+// import About from './Pages/About'
+// import Register from './Pages/Register'
 // import Layout from "./layout/Layout"
-import Gallery from "./Pages/Gallery"
+// import Gallery from "./Pages/Gallery"
 
 function MyRoutes() {
   return (
     <Router>
       <Routes>
         {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<Layout />}>
-    <Route index element= {<Home/>}/>
-    <Route path='/about' element={<About/>}/>
-    <Route path='/test' element={<Test/>}/>
-    <Route path='/register' element={<Register/>}/>
-    <Route path="/gallery" element={<Gallery/>} />
-   
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/forgot-password" element={<ForgotPassword/>} />
-        <Route path="/reset-password" element={<ResetPassword/>} />
+        <Route path="/" element={<Layout/>}>
+          <Route index element={<Home/>} /> 
+          <Route path='/about' element={<About/>} />
+          {/* <Route path='/test' element={<Test/>} /> */}
+          <Route path='/register' element={<Register/>} />
+          <Route path="/gallery" element={<Gallery />} /> 
 
-</Route>
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
+
+        </Route>
       </Routes>
     </Router>
   );

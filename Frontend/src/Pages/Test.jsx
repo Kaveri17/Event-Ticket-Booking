@@ -33,6 +33,7 @@ function AutoPlay() {
         <div>
           <h3>6</h3>
         </div>
+        
       </Slider>
     </div>
   );
