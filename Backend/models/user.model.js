@@ -35,6 +35,11 @@ const userSchema = new mongoose.Schema({
         type:Boolean,
         default:false
     },
+    role:{
+        type:String,
+        require: true,
+        enum: ['admin', 'user', 'organizer'],  // Only these roles are allowed to enter
+    },
     resetPasswordToken:String,
     resetPasswordExpiresAt:Date,
     verificationToken:String,

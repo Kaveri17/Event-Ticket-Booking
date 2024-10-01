@@ -9,7 +9,9 @@ import userRoutes from "./routes/user.route.js"
 dotenv.config()
 
 const app =express()
-const PORT = process.env.PORT || 8000
+const PORT = process.env.PORT || 5000
+
+
 
 //middleware that allows us to parse incoming request :re.body  
 app.use(express.json()) 
@@ -17,9 +19,15 @@ app.use(express.json())
 app.use(cookieParser())
 
 // api routes being used from auth.route.js 
-app.use("/api/auth",userRoutes)
+app.use("/api/user",userRoutes)
 
 app.listen(PORT, ()=>{
     connectDB();
     console.log("Server is running on port :",PORT )
 })
+
+app.get('/api/events', (req, res) => {
+    // Example: Fetch events from database
+    const events = [{ id: 1, name: 'Conference' }, { id: 2, name: 'Workshop' }];
+    res.json(events);
+  });
