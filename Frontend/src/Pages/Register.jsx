@@ -1,13 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {  FaKey, FaPhoneAlt, FaUser } from "react-icons/fa";
 import { MdEmail } from "react-icons/md"
 import { IoLocation } from 'react-icons/io5';
 
 const Register = () => {
+
+  let [username, setUserName] = useState('')
+  let[firstname, setFirstName]= useState('')
+  let[lastname, setLastName] = useState('')
+  let[email, setEmail] = useState('')
+  let[phone, setPhone] = useState('')
+  let[address, setAddress] =useState('')
+
+
+  const handleRegister = e => {
+    
+  }
+
+
   return (
 <>
-<div className=' pt-8'>
+<div className=''>
       <div className='ram w-full h-screen ' >
 
         <div className='py-20'>

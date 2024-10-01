@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser"
 
 // importing auth.route.js file 
 import userRoutes from "./routes/user.route.js"
+import cors from 'cors'
 
 dotenv.config()
 
@@ -17,7 +18,7 @@ const PORT = process.env.PORT || 5000
 app.use(express.json()) 
 // allows us to parse the incoming cookies
 app.use(cookieParser())
-
+app.use(cors({ origin: 'http://localhost:5173' }));
 // api routes being used from auth.route.js 
 app.use("/api/user",userRoutes)
 
@@ -26,8 +27,8 @@ app.listen(PORT, ()=>{
     console.log("Server is running on port :",PORT )
 })
 
-app.get('/api/events', (req, res) => {
-    // Example: Fetch events from database
-    const events = [{ id: 1, name: 'Conference' }, { id: 2, name: 'Workshop' }];
-    res.json(events);
-  });
+// app.get('/api/events', (req, res) => {
+//     // Example: Fetch events from database
+//     const events = [{ id: 1, name: 'Conference' }, { id: 2, name: 'Workshop' }];
+//     res.json(events);
+//   });
