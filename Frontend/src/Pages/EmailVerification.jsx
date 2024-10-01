@@ -12,7 +12,6 @@ const EmailVerification = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
-
   const handleChange = (index, value) => {
     const newCode = [...code];
 
@@ -51,18 +50,18 @@ const EmailVerification = () => {
   const handleVerify = async (e) => {
     e.preventDefault();
     const verificationCode = code.join(""); //joins the individual digit code present in the code array to send as a whole number
-    try{
-        const data = await verifyEmail(verificationCode)
-        if (!data.success) {
-            setError(data.message || "Verify email failed. Please try again.");
-            setSuccess(false);
-          } else {
-            setSuccess(true);
-            setError("");
-            navigate("/");
-          }
-    }catch(error){
-        console.log(error)
+    try {
+      const data = await verifyEmail(verificationCode);
+      if (!data.success) {
+        setError(data.message || "Verify email failed. Please try again.");
+        setSuccess(false);
+      } else {
+        setSuccess(true);
+        setError("");
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
     }
     // alert(`Verification Code Submitted: ${verificationCode}`);
   };
@@ -86,9 +85,7 @@ const EmailVerification = () => {
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
-      <div
-        className="bg-white p-8 rounded-lg shadow-md w-full max-w-md"
-      >
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
           Verify Your Email
         </h2>
@@ -117,7 +114,7 @@ const EmailVerification = () => {
             // className="w-full bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg hover:from-green-600 hover:to-emerald-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50 disabled:opacity-50"
             className="w-full bg-orange-500 text-white py-2 font-bold rounded-lg shadow-lg transition duration-200 hover:bg-orange-600"
           >
-             Verify Email
+            Verify Email
           </button>
         </form>
       </div>

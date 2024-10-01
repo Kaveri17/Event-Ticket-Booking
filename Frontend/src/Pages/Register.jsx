@@ -199,7 +199,7 @@ const Register = () => {
 
             {/* Role Selection */}
             <div className="w-full flex items-center  mb-6">
-              <label className="flex items-center" >
+              <label className="flex items-center">
                 <input
                   type="radio"
                   name="role"

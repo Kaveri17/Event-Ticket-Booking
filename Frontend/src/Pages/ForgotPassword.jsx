@@ -1,45 +1,49 @@
-import { useState } from 'react';
-import { forgotPassword } from '../api/Userapp';
+import { useState } from "react";
+import { forgotPassword } from "../api/Userapp";
 
 const ForgotPassword = () => {
-  const [email, setEmail] = useState('');       
-  const [error, setError] = useState('');        
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try{
-      await forgotPassword({email})
-      .then(data => {
-        if(data.error){
-          setError(data.error)
-          setSuccess(false)
+    try {
+      await forgotPassword({ email }).then((data) => {
+        if (data.error) {
+          setError(data.error);
+          setSuccess(false);
+        } else {
+          setSuccess(true);
+          setError("");
         }
-        else{
-          setSuccess(true)
-          setError('')
-        
-        }
-      })
-    }catch (error) {
+      });
+    } catch (error) {
       console.log(error);
-      setError(error.message); 
+      setError(error.message);
     }
   };
   const showError = () => {
     if (error) {
-      return <div className='text-red-600 text-xl font-bold text-center'>{error}</div>;
+      return (
+        <div className="text-red-600 text-xl font-bold text-center">
+          {error}
+        </div>
+      );
     }
   };
-
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Forgot Password</h2>
+        <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">
+          Forgot Password
+        </h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-gray-700 mb-2" htmlFor="email">Email</label>
+            <label className="block text-gray-700 mb-2" htmlFor="email">
+              Email
+            </label>
             <input
               type="email"
               id="email"
@@ -55,7 +59,7 @@ const ForgotPassword = () => {
             type="submit"
             className="w-full bg-orange-500 text-white py-2 rounded-lg transition duration-200 hover:bg-orange-600"
           >
-        Reset password
+            Reset password
           </button>
         </form>
         {/* {message && (
