@@ -44,15 +44,15 @@ const ResetPassword = () => {
               type="password"
               id="password"
               value={password}
-              onChange={(e) => setPassword(e.target.value)}
+
               className="w-full border border-gray-300 p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
               placeholder="Your New Password"
-              required
+              required               onChange={(event) => setPassword(event.target.value)}
             />
           </div>
           <button
             type="submit"
-            className="w-full bg-orange-500 text-white py-2 rounded-lg transition duration-200 hover:bg-orange-600"
+            className="w-full bg-orange-500 text-white py-2 rounded-lg transition duration-200 hover:bg-orange-600" onClick={handleSubmit}
           >
             Reset Password
           </button>

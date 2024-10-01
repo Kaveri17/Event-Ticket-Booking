@@ -413,7 +413,56 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/*  */}
+      {/* most visited place */}
+
+      <div className='w-5/6 mx-auto pt-8'>
+        <div>
+          <h1 className='text-4xl font bold'>
+            Most Visited Places
+          </h1>
+          <p className='text-lg text-neutral-400 pt-3 pb-4'>You can Choose to display featured</p>
+          <div className="border-t-2 w-16 pb-8 border-red-500"></div>
+
+        </div>
+        
+
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-8'>
+        < div className='w-full h-auto pb-16 img1 relative'>
+    <img src="/california.jpg" alt="California" className='w-full h-full object-cover' style={{ height: '300px' }} />
+    
+    <p className='text-xl absolute top-60 left-20 text-white text-center'>
+        California
+    </p>
+</div>
+        {/* 2 */}
+       
+        <div className='w-full h-auto pb-16 img1 relative'>
+    <img src="thamel.jpg" alt="" className='w-full h-full object-cover' style={{ height: '300px' }} />
+    
+    <p className='text-xl absolute top-60 left-20 text-white text-center'>
+       Thamel
+    </p>
+</div>
+        {/* 3 */}
+        <div className='w-full h-auto pb-16 img1 relative'>
+    <img src="hotel.jpg" alt="" className='w-full h-full object-cover' style={{ height: '300px' }} />
+    <p className='text-xl absolute top-60 left-20 text-white text-center'>
+      Hotel Ambassador 
+    </p>
+</div>
+
+        {/* 4 */}
+       
+       < div className='w-full h-auto pb-16 img1 relative'>
+    <img src="satdium.jpg" alt="" className='w-full h-full object-cover' style={{ height: '300px' }} />
+    
+    <p className='text-xl absolute top-60 left-20 text-white text-center'>
+    Dasarath Stadium
+    </p>
+</div>
+    </div>
+          
+      </div>
 
       {/* subscribe */}
 
