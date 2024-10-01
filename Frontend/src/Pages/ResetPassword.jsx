@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const ResetPassword = () => {
   const [password, setPassword] = useState('');
-  const [message, setMessage] = useState('');
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +15,7 @@ const ResetPassword = () => {
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
         <h2 className="text-2xl font-semibold text-gray-800 mb-6 text-center">Reset Password</h2>
-        <form onSubmit={handleSubmit}>
+        <form >
           <div className="mb-4">
             <label className="block text-gray-700 mb-2" htmlFor="password">New Password</label>
             <input

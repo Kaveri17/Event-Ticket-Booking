@@ -7,6 +7,10 @@ import About from './pages/About'
 import Register from './Pages/Register'
 import Layout from "./layout/Layout"
 import Gallery from "./Pages/Gallery"
+import Contact from './Pages/Contact'
+import Login from './Pages/Login'
+import ForgotPassword from './Pages/ForgotPassword'
+import ResetPassword from './Pages/ResetPassword'
 
 
 const MyRoutes = () => {
