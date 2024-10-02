@@ -1,44 +1,37 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-// import Home from './Home';
-// import About from './About';
-import Contact from './components/Contact';
-import Login from './components/Login';
-import ForgotPassword from './components/ForgotPassword';
-import ResetPassword from './components/ResetPassword';
-import Gallery from './Pages/Gallery';
-import Register from './Pages/Register';
-import About from './pages/About';
-import Home from './Pages/Home';
-import Layout from './layout/Layout';
-// import Test from "./Pages/Test"
-// import Home from './Pages/Home'
-// import About from './Pages/About'
-// import Register from './Pages/Register'
-// import Layout from "./layout/Layout"
-// import Gallery from "./Pages/Gallery"
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Test from "./Pages/Test";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Register from "./Pages/Register";
+import Layout from "./layout/Layout";
+import Gallery from "./Pages/Gallery";
+import Contact from "./Pages/Contact";
+import Login from "./Pages/Login";
+import ForgotPassword from "./Pages/ForgotPassword";
+import ResetPassword from "./Pages/ResetPassword";
+import EmailVerification from "./Pages/EmailVerification";
 
-function MyRoutes() {
+const MyRoutes = () => {
   return (
-    <Router>
-      <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<Layout/>}>
-          <Route index element={<Home/>} /> 
-          <Route path='/about' element={<About/>} />
-          {/* <Route path='/test' element={<Test/>} /> */}
-          <Route path='/register' element={<Register/>} />
-          <Route path="/gallery" element={<Gallery />} /> 
-
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgot-password" element={<ForgotPassword />} />
-          <Route path="/reset-password" element={<ResetPassword />} />
-
-        </Route>
-      </Routes>
-    </Router>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/test" element={<Test />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/gallery" element={<Gallery />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgot-password" element={<ForgotPassword />} />
+            <Route path="/reset-password/:token" element={<ResetPassword />} />
+            <Route path="/verify-email" element={<EmailVerification />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
-}
+};
 
 export default MyRoutes;

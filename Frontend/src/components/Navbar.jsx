@@ -22,8 +22,14 @@ const Navbar = () => {
   return (
     <nav className="bg-teal-600 text-base py-4 sticky">
       <div className=" flex justify-between items-center px-2 py-3 w-11/12 mx-auto">
-        <div className="logo w-1/4">AKA ticket</div>
-        <div className="nav-content w-2/3 hidden md:flex justify-between list-none">
+        <div className="w-1/3 bg-slate-300 flex items-center">
+        <div className="logo w-[15%]">
+        <img src="/logo.png" alt="AKA Ticket"  className="rounded-full w-full"/> 
+        </div>
+        <span className="heading">AKA Ticket</span>
+
+        </div>
+        <div className="nav-content w-2/3 bg-neutral-500 hidden md:flex justify-between list-none">
           {/* <ul className=""> */}
           <Link to='/'>
             <li className="text-white hover:text-slate-400">Home</li>
