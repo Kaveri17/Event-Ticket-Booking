@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const sidebarRef = useRef(null);
+  const token = 
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
@@ -43,9 +44,9 @@ const Navbar = () => {
           <Link to="/about">
             <li className="text-white hover:text-slate-300">About Us</li>
           </Link>
-          <Link to="/events">
+          <Link to="/gallery">
             <li className=" text-white hover:text-slate-300">
-              Upcoming Events
+              Gallery
             </li>
           </Link>
           <Link to="/contact">
@@ -91,11 +92,11 @@ const Navbar = () => {
               Contact Us
             </li>
           </Link>
-          <Link to="/login">
-            <li className="py-4  text-white hover:text-slate-200">Login</li>
-          </Link>
           <Link to="/register">
             <li className="py-4  text-white hover:text-slate-200">Register</li>
+          </Link>
+          <Link to="/login">
+            <li className="py-4  text-white hover:text-slate-200">Login</li>
           </Link>
         </div>
       </div>

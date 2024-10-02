@@ -8,6 +8,7 @@ export const register = (user) => {
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: 'include',// This ensures cookies are sent with the request
     body: JSON.stringify(user),
   })
     .then((response) => response.json())
@@ -21,6 +22,7 @@ export const login = (email, password) => {
     headers: {
       "Content-Type": "application/json",
     },
+    credentials: 'include',// This ensures cookies are sent with the request
     body: JSON.stringify({ email, password }),
   })
     .then((response) => response.json())
