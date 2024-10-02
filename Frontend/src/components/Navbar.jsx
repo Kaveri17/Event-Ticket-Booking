@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const sidebarRef = useRef(null);
-  const token = 
+  const token = getCookie()
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
