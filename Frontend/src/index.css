@@ -72,3 +72,11 @@
 /* .logo1{
     width: ;
 } */
+/* gallery */
+
+.gall {
+    background-image: url('gall.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 37vh;
+}
