@@ -44,9 +44,9 @@ const Home = () => {
 
   return (
     <>
-      <div className="sita h-screen w-full">
-        <div className=" w-5/6 mx-auto ">
-          <div className=" text-6xl font-bold text-center p-48 text-white r">
+      <div className="sita h-[90vh] w-full">
+        <div className="w-full sm:w-2/4 md:w-5/6 mx-auto ">
+          <div className="text-3xl sm:text-4xl md:text-6xl font-bold text-center px-5 py-48 md:p-48 text-white">
             <h1>Connecting the World</h1>
 
             <div>

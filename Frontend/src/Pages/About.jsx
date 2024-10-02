@@ -53,7 +53,7 @@ const About = () => {
     ]
   };
   return (
-    <div className=' '>
+    <div className='pb-5 '>
       <div className='ram w-full h-screen ' >
 
         <div className='py-16'>
@@ -104,12 +104,12 @@ const About = () => {
             </div>
             <p className='md:ps-12   text-xl pt-4 pb-4'>The client tell about us..</p>
             <div className='md:ps-12 ps -12 pb-3'>
-              <div class="  border-t-4 w-16 border-red-500 ..."></div>
+              <div className="  border-t-4 w-16 border-red-500 ..."></div>
             </div>
 
 
-            <div className="slider-container ">
-              <Slider {...settings}>
+            <div className="slider-container">
+              <Slider {...settings} >
                 <div>
                   <div className=' md:ps-12 text-lg pb-7 '>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.Odit vel veritatis nisi et in sed quae quos placeat laboriosam.</p>
@@ -164,14 +164,14 @@ const About = () => {
       </div>
       {/* our team */}
 
-      <div className='pt-8 w-5/6 mx-auto '>
+      <div className='pt-8 w-5/6 mx-auto pb-5'>
         <div className=''>
 
 
           <div className=' '>
             <h1 className='text-extrabold text-3xl '>Our Team</h1>
             <h1 className='pt-4 pb-4 text-xl'>We are strong about event</h1>
-            <div class=" border-t-4 w-16 border-red-500 ..."></div>
+            <div className=" border-t-4 w-16 border-red-500 ..."></div>
           </div>
         </div>
      

@@ -33,7 +33,7 @@
     background-image: url('/5w.jpg');
     background-position: center;
     background-size: cover;
-    opacity: 70%;
+    /* opacity: 70%; */
 }
 
 
@@ -54,7 +54,6 @@
     background-size: cover;
     height: 75vh;
     width: 100%;
-   
     position: relative;
 }
 
@@ -70,3 +69,6 @@
     z-index: 1; 
 }
 
+/* .logo1{
+    width: ;
+} */
