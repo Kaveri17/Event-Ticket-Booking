@@ -39,7 +39,7 @@ const Register = () => {
       } else {
         setSuccess(true);
         setError("");
-        navigate("/login");
+        navigate("/verify-email");
       }
     } catch (error) {
       console.log(error);

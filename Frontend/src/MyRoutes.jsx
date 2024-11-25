@@ -10,6 +10,7 @@ import Login from "./Pages/Login";
 import ForgotPassword from "./Pages/ForgotPassword";
 import ResetPassword from "./Pages/ResetPassword";
 import EmailVerification from "./Pages/EmailVerification";
+import Dashboard from "./admin/Dashboard";
 
 const MyRoutes = () => {
   return (
@@ -27,6 +28,7 @@ const MyRoutes = () => {
             <Route path="/forgot-password" element={<ForgotPassword />} />
             <Route path="/reset-password/:token" element={<ResetPassword />} />
             <Route path="/verify-email" element={<EmailVerification />} />
+            <Route path="/admin/dashboard" element={<Dashboard />} />
           </Route>
         </Routes>
       </BrowserRouter>

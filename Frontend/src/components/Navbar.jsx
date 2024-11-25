@@ -1,11 +1,26 @@
 import { useEffect, useRef, useState } from "react";
 import { IoClose, IoMenu } from "react-icons/io5";
 import { Link } from "react-router-dom";
+// import { getCookie } from "../cookieGet";
+import Cookies from 'js-cookie';
 
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   const sidebarRef = useRef(null);
-  const token = 
+  // const token = getCookie('token');
+  
+  const token = Cookies.get('token'); // 'token' is the name of the cookie
+  console.log('Token:', token);
+
+  // Check if the token exists, then modify the state or display accordingly
+  if (token) {
+    console.log("Token exists:", token);
+    // Set your state or perform any actions based on the token
+    // Example: Show the user's profile or a logout button
+  } else {
+    console.log("No token found");
+    // Handle the case where there is no token (e.g., show login/signup)
+  }
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
@@ -52,11 +67,11 @@ const Navbar = () => {
           <Link to="/contact">
             <li className=" text-white hover:text-slate-300">Contact Us</li>
           </Link>
-          <Link to="/login">
-            <li className="text-white hover:text-slate-300">Login</li>
-          </Link>
           <Link to="/register">
             <li className="text-white hover:text-slate-300">Register</li>
+          </Link>
+          <Link to="/login">
+            <li className="text-white hover:text-slate-300">Login</li>
           </Link>
           {/* </ul> */}
         </div>
@@ -82,9 +97,9 @@ const Navbar = () => {
           <Link to="/about">
             <li className="py-4  text-white hover:text-slate-200">About Us</li>
           </Link>
-          <Link to="/events">
+          <Link to="/gallery">
             <li className="py-4  text-white hover:text-slate-200">
-              Upcoming Events
+              Gallery
             </li>
           </Link>
           <Link to="/contact">
